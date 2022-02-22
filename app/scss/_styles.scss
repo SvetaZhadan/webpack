@@ -6,6 +6,8 @@
 }
 $black100:#2D2926;
 $white100:#fff;
+$primary500:#83724C;
+$primary200:#C7AA6A;
 body{
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -16,9 +18,7 @@ a{
     color: #000;
   }
 }
-.header{
-
-}
+//header
 .o-navBar{
   display: flex;
   justify-content: space-between;
@@ -26,11 +26,11 @@ a{
   padding: 18px 40px;
 
   text-transform: uppercase;
-  li{
+  .a-item{
     display: inline;
     margin-right: 40px;
   }
-  li:last-child{
+  .a-item:last-child{
     margin-right: 0;
   }
 }
@@ -53,16 +53,16 @@ a{
   padding: 16px 54px 14px;
   font-size: 14px;
 }
-.col-center{
+.m-col-center{
   img{
     width: 106px;
   }
 }
-.col-3{
-  li:last-child{
+.m-col-3{
+  .a-item:last-child{
     margin-left: 10px;
   }
-  li:nth-child(4){
+  .a-itemi:nth-child(4){
     margin-right: 0;
   }
 }
@@ -79,9 +79,7 @@ a{
     right: 0;
     bottom: 0;
     background: rgba(0,0,0,.5);
-
   }
-
 }
 .swiper-slide{
   background-image: url("assets/images/Background-header.png");
@@ -118,4 +116,27 @@ a{
 }
 .swiper-button-prev, .swiper-rtl .swiper-button-next{
   color: $white100;
+}
+
+//main
+.section{
+  margin: 0;
+  padding: 20px 200px;
+  background-color: $primary200;
+}
+//footer
+.footer{
+  background-color: $black100;
+  color:$white100;
+  margin: 0;
+  padding: 88px 127px;
+  display: flex;
+  justify-content: space-between;
+  a.item{
+    display: inline;
+  }
+  .list{
+    display: flex;
+    justify-content: space-between;
+  }
 }
