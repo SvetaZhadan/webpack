@@ -1,11 +1,49 @@
 /* ================================ Base ================================ */
-
-
-$errorColor:#EC4343;
-
-
-// $white60:rgba(255, 255, 255, 0.6);
-// $white20:rgba(255, 255, 255, 0,2);
-$gray10:#f6f6f6;
-
-// $black60:rgba(31, 31, 31, 0,6);
+.btn{
+  background-color: transparent;
+  border: 1px solid $black100;
+  border-radius: 0;
+  color: $black100;
+  outline: none;
+  outline-width: 0px !important;
+  outline-color: none !important;
+  text-transform: uppercase;
+  @include Uppercase_S14_W-400;
+  &:hover{
+    background-color: $black100;
+    color: $white100;
+    border-color: $black100;
+    path{
+      fill: $white100;
+    }
+  }
+  &:active{
+    background-color: rgba(31, 31, 31, 0.6);;
+    color: $white100;
+    border-color: $black100;
+  }
+  &:disabled{
+    background-color: transparent;
+    color: $black100;
+    border-color: $black100;
+  }
+}
+.btnLang{
+  background-color: $black100;
+  color: $white100;
+  border-radius: 0;
+  &:hover{
+    background-color: rgba(31, 31, 31, 0.6);
+    color: $white100;
+    border-color: rgba(31, 31, 31, 0.6);
+  }
+}
+.socialsIcon{
+  border:1px solid rgba(255, 255, 255, 0.6);
+  &:hover{
+    background-color: $white100;
+    path{
+      fill:$primary500;
+    }
+  }
+}

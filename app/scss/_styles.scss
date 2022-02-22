@@ -3,140 +3,115 @@
 @mixin Heading_H1_W-400 {
   font-size: 70px;
   font-weight: 400;
+  line-height: 1.2;
 }
+@mixin Heading_H2_W-400 {
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 1.18;
+}
+@mixin Heading_H3_W-400 {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.16;
+}
+@mixin Heading_H4_W-400 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+@mixin Heading_H5_W-400 {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.24;
+}
+@mixin Heading_H6_W-400 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.16;
+}
+
+@mixin Text_S18_W-400 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.36;
+}
+@mixin Text_S16_W-400 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+@mixin Text_S14_W-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+@mixin Text_S12_W-400 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+@mixin Text_S18_W-600 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.36;
+}
+@mixin Text_S16_W-600 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.28;
+}
+@mixin Text_S12_W-600 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.36;
+}
+
+@mixin Uppercase_S24_W-400 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@mixin Uppercase_S16_W-400 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+@mixin Uppercase_S14_W-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.46;
+}
+@mixin Uppercase_S24_W-400 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@mixin Underline_S18_W-400 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.36;
+}
+@mixin Underline_S16_W-400 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.28;
+}
+@mixin Underline_S14_W-400 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+//Ungrouped colors
+$errorColor:#EC4343;
+//Monochrome
 $black100:#2D2926;
+$black60:#1f1f1f99;
 $white100:#fff;
+$white60:#ffffff99;
+$white20:#ffffff33;
+$gray10:#f6f6f6;
+//Primary
 $primary500:#83724C;
 $primary200:#C7AA6A;
-body{
-  font-family: 'Source Sans Pro', sans-serif;
-}
-a{
-  color: #000;
-  &:hover{
-    text-decoration: none;
-    color: #000;
-  }
-}
-//header
-.o-navBar{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 40px;
-
-  text-transform: uppercase;
-  .a-item{
-    display: inline;
-    margin-right: 40px;
-  }
-  .a-item:last-child{
-    margin-right: 0;
-  }
-}
-.a-headerButton,.a-headerButton-phone {
-  background-color: transparent;
-  border: 1px solid $black100;
-  border-radius: 0;
-  color: $black100;
-  cursor: pointer;
-  &:hover{
-    background-color: transparent;
-    color: $black100;
-    border-color: $black100;
-  }
-}
-.a-headerButton-phone {
-  padding: 13.5px;
-}
-.a-headerButton {
-  padding: 16px 54px 14px;
-  font-size: 14px;
-}
-.m-col-center{
-  img{
-    width: 106px;
-  }
-}
-.m-col-3{
-  .a-item:last-child{
-    margin-left: 10px;
-  }
-  .a-itemi:nth-child(4){
-    margin-right: 0;
-  }
-}
-
-.swiper {
-  width: 100%;
-  height: 884px;
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.5);
-  }
-}
-.swiper-slide{
-  background-image: url("assets/images/Background-header.png");
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: $white100;
-}
-
-.a-h1{
-  text-align: center;
-  @include Heading_H1_W-400;
-
-}
-.a-h1:before,
-.a-h1:after {
-  content: '';
-  display: inline-block;
-  position: relative;
-  top: 4px;
-  width: 50%;
-  height: 2px;
-  vertical-align: middle;
-  background: $white100;
-}
-.a-h1:before {
-  left: -10px;
-  margin-left: -50%;
-}
-.a-h1:after {
-  left: 10px;
-  margin-right: -50%;
-}
-.swiper-button-prev, .swiper-rtl .swiper-button-next{
-  color: $white100;
-}
-
-//main
-.section{
-  margin: 0;
-  padding: 20px 200px;
-  background-color: $primary200;
-}
-//footer
-.footer{
-  background-color: $black100;
-  color:$white100;
-  margin: 0;
-  padding: 88px 127px;
-  display: flex;
-  justify-content: space-between;
-  a.item{
-    display: inline;
-  }
-  .list{
-    display: flex;
-    justify-content: space-between;
-  }
-}

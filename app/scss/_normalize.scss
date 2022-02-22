@@ -1,5 +1,8 @@
 /* ================================ Normalize ================================ */
 /* stylelint-disable */
+button, a{
+  cursor: pointer;
+}
 *,
 ::before,
 ::after {
@@ -601,7 +604,7 @@ input[type='reset']:not(:disabled):active,
 input[type='button']:not(:disabled):active,
 button:not(:disabled):active {
   background-color: var(--primary-600);
-  border-color: var(--primary-600);
+  // border-color: var(--primary-600);
   color: var(--white);
 }
 input[type='submit']:focus,
