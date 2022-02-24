@@ -7,6 +7,7 @@
   outline: none;
   outline-width: 0px !important;
   outline-color: none !important;
+  transition-duration: 0.3s;
   text-transform: uppercase;
   @include Uppercase_S14_W-400;
   &:hover{
@@ -32,6 +33,7 @@
   background-color: $black100;
   color: $white100;
   border-radius: 0;
+  transition-duration: 0.3s;
   &:hover{
     background-color: rgba(31, 31, 31, 0.6);
     color: $white100;
