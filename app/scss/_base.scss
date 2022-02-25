@@ -34,21 +34,14 @@
   color: $white100;
   border-radius: 0;
   transition-duration: 0.3s;
+  margin: 0;
   &:hover{
     background-color: rgba(31, 31, 31, 0.6);
     color: $white100;
     border-color: rgba(31, 31, 31, 0.6);
   }
 }
-.socialsIcon{
-  border:1px solid rgba(255, 255, 255, 0.6);
-  &:hover{
-    background-color: $white100;
-    path{
-      fill:$primary500;
-    }
-  }
-}
+
 @media (max-width:1280px){
   .btn{
     padding: 12px;

@@ -71,37 +71,44 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 @mixin Uppercase_S16_W-400 {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 @mixin Uppercase_S14_W-400 {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.46;
+  text-transform: uppercase;
 }
 @mixin Uppercase_S24_W-400 {
   font-size: 24px;
   font-weight: 400;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 @mixin Underline_S18_W-400 {
   font-size: 18px;
   font-weight: 400;
   line-height: 1.36;
+  text-decoration: underline;
 }
 @mixin Underline_S16_W-400 {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.28;
+  text-decoration: underline;
 }
 @mixin Underline_S14_W-400 {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
+  text-decoration: underline;
 }
 //Ungrouped colors
 $errorColor:#EC4343;

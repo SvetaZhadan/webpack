@@ -3,6 +3,7 @@
   .a-mobileNav{
     display: none;
   }
+
 }
 @media(max-width:1540px){
   .o-navBar{
@@ -29,7 +30,7 @@
     padding: 12px;
     width: 56px;
     height: 56px;
-    svg{
+    path{
       width: 23px;
     }
   }
@@ -57,11 +58,20 @@
       float: left;
       left: 0px;
       padding: 2px 10px;
-      color: $black100;
+      color: $black60;
       background-color: transparent;
+      // margin-left: 34px;
+      padding: 0;
+      border: none;
+      &:hover{
+        border: none;
+      }
     }
     .a-navBarSearchMob{
-      padding: 0 32px;
+      margin: 0 32px;
+    }
+    .menuToggle {
+      margin: 0;
     }
   }
 
@@ -75,11 +85,19 @@
 }
 .a-mobileNav{
   display: flex;
-  padding: 24px 0px 14px;
+  flex-direction: row;
+  padding: 40px 0px 28px;
   text-transform: uppercase;
   width: 95vw;
   background: white;
-  position:absolute
+  position:absolute;
+  ol{
+    display: flex;
+    
+    .a-item{
+  
+    }
+  }
 }
 .m-mobileNav{
   padding: 0px 40px 18px;
@@ -96,6 +114,7 @@
     margin-right: 0;
   }
 }
+
 .a-h1{
   text-align: center;
   @include Heading_H2_W-400;
@@ -111,9 +130,13 @@
 @media (max-width:1100px){
   .a-mobileNav{
     .a-item{
-      margin-right: 5px;
+      margin-right: 10px;
+    }
+    .a-link{
+      @include Uppercase_S14_W-400;
     }
   }
+
   .a-h1{
     text-align: center;
     @include Heading_H3_W-400;
@@ -158,16 +181,23 @@
   }
 }
 @media (max-width:800px) {
+  .o-navBar{
+    padding: 8px 22px;
+   
+  }
   .a-mobileNav{
     width: 95vw;
     height: 100vh;
     z-index: 3;
     .a-item{
-      @include Heading_H3_W-400;
+      // @include Heading_H3_W-400;
       margin-bottom: 47px;
     }
     .a-item:last-child{
       margin-bottom: 0;
+    }
+    .a-link{
+      @include Heading_H3_W-400;
     }
     li{
       // list-style-type: decimal;  
@@ -193,12 +223,27 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    padding: 28px 54px;
+    padding: 28px 54px 49px;
+      .a-link{
+        @include Heading_H5_W-400;
+        margin-bottom: 47px;
+      }
   }
-  .a-navBarSearchMob, .a-headerButtonPhone{
+  
+  .a-headerButtonPhone{
     display: none;
   }
-
+  .o-navBar{
+    .a-navBarSearchMob{
+      display: none;
+    }
+  }
+ .btnLang{
+  margin-left: 34px;
+ }
+  .m-col-3 .a-item:last-child {
+     margin-left: 0px;
+}
   header.mobile{
     display: flex;
     justify-content: space-between;
@@ -220,9 +265,49 @@
       }
   
     }
-
+    .a-link{
+      margin: 0;
+    }
+    .a-phoneNumber{
+      
+    }
   }
-
+  footer.mobile{
+    display: block;
+    padding-top: 93px;
+    margin: 0;
+    .a-phoneNumber{
+      display: flex;
+      justify-content: flex-end;
+      @include Heading_H5_W-400;
+    }
+    hr{
+      border-top: 1px solid  #2D2926;
+      margin: 38px 0 26px;
+      opacity: 0.5;
+    }
+    .socialsIcon{
+      padding: 0;
+      border:none;
+      
+      path{
+        fill:#2D2926;
+        opacity: 0.5;
+      }
+      &:hover{
+        path{
+          transition-duration: 0.3s;
+          opacity: 1;
+        }
+      }
+    }
+    .copyright{
+      @include Text_S14_W-400;
+      color: $black100;
+      opacity: 0.5;
+      margin-top: 24px;
+    }
+  }
   .footer{
     padding: 88px 48px;
   }
@@ -267,7 +352,6 @@
   }
 }
 @media (max-width:580px){
- 
 .footer{
   padding: 88px 10px;
 }
@@ -286,5 +370,25 @@ svg{
 }
 }
 @media (max-width:450px){
-
+  header.mobile{
+    svg{
+      width: 15px;
+    }
+    .a-headerButtonPhone{
+      svg{
+        width: 15px;
+      }
+    }
+  }
+  .a-navBarSearchMob, .a-headerButton, .a-btnLang{
+    display: none;
+  }
+  .o-navBar{
+    .a-btnLang {
+      display: none;
+    }
+  }
+ .swiper{
+   height: 495px; //сделать нормальную адаптинвность!!
+ }
 }

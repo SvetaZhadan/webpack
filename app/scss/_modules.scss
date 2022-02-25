@@ -4,9 +4,9 @@ body{
 }
 //header
 .header{
-  @include Uppercase_S16_W-400;
-  a{
+  .a-link{
     color: #000;
+    @include Uppercase_S16_W-400;
     &:hover{
       transition-duration: 0.3s;
       text-decoration: none;
@@ -49,7 +49,7 @@ header.mobile{
   justify-content: space-between;
   align-items: center;
   padding: 0px 40px 18px;
-  text-transform: uppercase;
+  @include Uppercase_S16_W-400;
   width: 100%;;
   .active{
     color: $primary500;
@@ -61,6 +61,9 @@ header.mobile{
   .a-item:last-child{
     margin-right: 0;
   }
+}
+.a-mobileNav{
+  @include Uppercase_S16_W-400;
 }
 .a-headerButtonPhone {
   padding: 13.5px;
@@ -94,6 +97,7 @@ header.mobile{
 .swiper {
   width: 100%;
   height: 884px;
+  // min-height: 320px;
   position: relative;
   &::after {
     content: '';
@@ -166,6 +170,9 @@ header.mobile{
   background-color: $primary200;
 }
 //footer
+footer.mobile{
+  display: none;
+}
 .footer{
   background-color: $black100;
   color:$white100;
@@ -244,6 +251,16 @@ header.mobile{
   margin-top: 36px;
   path{
     fill:$white100;
+  }
+}
+.socialsIcon{
+  
+  border:1px solid rgba(255, 255, 255, 0.6);
+  &:hover{
+    background-color: $white100;
+    path{
+      fill:$primary500;
+    }
   }
 }
 .socialsIcon{
