@@ -32,11 +32,13 @@ $(document).ready(function() {
       $('.m-col-center').css("display","none");
       $('.hamburger.hidden').css("display","block")
       $('.hamburger.active').css("display","none")
+      $('.a-btnLang').css("display","none")
       if($(this).css('display') === "none"){
         $(this).removeAttr('style');
         $('.m-col-center').css("display","block")
         $('.hamburger.hidden').css("display","none")
         $('.hamburger.active').css("display","block")
+        $('.a-btnLang').css("display","block")
       }
     });
   });
