@@ -14,14 +14,20 @@ body{
     }
   }
 }
-.a-navBarSearchMob {
+header.mobile{
   display: none;
 }
+.o-navBar{
+  .a-navBarSearchMob, .a-btnLang {
+    display: none;
+  }
+}
+
 .menuToggle{  
   color: $black100;
   cursor: pointer;
   display: none;
-  margin-right: 32px;;
+  // margin-right: 32px;;
 }
 .icon {
   cursor: pointer;
@@ -100,7 +106,9 @@ body{
   }
 }
 .swiper-slide{
-  // background-image: url("assets/images/Background-header.png");
+  background-image: url("assets/images/Background-header.png");
+  background-size: cover;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
