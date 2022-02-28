@@ -1,48 +1,57 @@
 /* ================================ Base ================================ */
+
 .btn{
+  color: $black100;
   background-color: transparent;
   border: 1px solid $black100;
   border-radius: 0;
-  color: $black100;
   outline: none;
-  outline-width: 0px !important;
-  outline-color: none !important;
-  transition-duration: 0.3s;
-  text-transform: uppercase;
+  transition-duration: 0,3s;
+
   @include Uppercase_S14_W-400;
+
   &:hover{
-    background-color: $black100;
     color: $white100;
+    background-color: $black100;
+    
     border-color: $black100;
+
     path{
       fill: $white100;
     }
   }
-   &:focus, &:active{
-    background-color: rgba(31, 31, 31, 0.6);;
+
+  &:focus, &:active{
     color: $white100;
+    background-color: rgba(31, 31, 31, .6);
+    
     border-color: $black100;
   }
+
   &:disabled{
-    background-color: transparent;
     color: $black100;
+    background-color: transparent;
     border-color: $black100;
-  }
-}
-.btnLang{
-  background-color: $black100;
-  color: $white100;
-  border-radius: 0;
-  transition-duration: 0.3s;
-  margin: 0;
-  &:hover{
-    background-color: rgba(31, 31, 31, 0.6);
-    color: $white100;
-    border-color: rgba(31, 31, 31, 0.6);
   }
 }
 
-@media (max-width:1280px){
+.btnLang{
+  margin: 0;
+  color: $white100;
+  background-color: $black100;
+  border-radius: 0;
+  transition-duration: .3s;
+ 
+
+  &:hover{
+    color: $white100;
+    background-color: rgba(31, 31, 31, .6);
+    border-color: rgba(31, 31, 31, .6);
+  }
+}
+
+@media (max-width: 1280px){
+
   .btn{
     padding: 12px;
   }

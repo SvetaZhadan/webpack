@@ -1,137 +1,178 @@
 /* ================================ Media ================================ */
-@media(min-width:1280px) {
+
+@media(min-width: 1280px) {
+
   .a-mobileNav{
     display: none;
   }
 
 }
-@media(max-width:1540px){
-  .o-navBar{
-    .a-item {
-      display: inline;
-      margin-right: 5px;
-    }
-  } 
-}
-@media (max-width:1280px){
+
+@media (max-width: 1540px){
+
   .header{
     padding-top: 18px;
   }
+
   .a-btnLang.absolute{
     display: none;
   }
+
   .a-headerButtonPhone {
-    padding: 11.5px;
+    padding: 10.5px;
   }
+
   .a-headerButton {
     padding: 10px 32px;
   }
+
   .socialsIcon{
-    padding: 12px;
     width: 56px;
     height: 56px;
+    padding: 12px;
+
     path{
       width: 23px;
     }
   }
+
   .m-col-1{
     display: none;
-    background-color: $white100;
     width: 100%;
+    background-color: $white100;
   }
+
   .m-col-3{
+
+    .a-item{
+      margin: 0;
+    }
+
     .a-linkBox, .a-item:nth-child(3){
       display: none;
+   
     }
   }
+
   .o-navBar{
     display: flex;
     justify-content: space-between;
-  }
-  
-  .o-navBar{
+
     .a-navBarSearchMob , .btnLang{
       display: block;
     }
+
     .btnLang{
       position: relative;
-      float: left;
       left: 0px;
+      float: left;
       padding: 2px 10px;
+      padding: 0;
       color: $black60;
       background-color: transparent;
       // margin-left: 34px;
-      padding: 0;
+      
       border: none;
+
       &:hover{
         border: none;
       }
     }
+  
     .a-navBarSearchMob{
       margin: 0 32px;
     }
+
     .menuToggle {
+      display: block;
       margin: 0;
+      margin-right: 38px;
     }
   }
 
- 
-  .menuToggle{  
-    display: block;
-    margin-right: 38px;
-  }
-.m-navMobile{
-  display: flex;
-}
-.a-mobileNav{
-  display: flex;
-  flex-direction: row;
-  padding: 40px 0px 28px;
-  text-transform: uppercase;
-  width: 95vw;
-  background: white;
-  position:absolute;
-  ol{
+  .m-navMobile{
     display: flex;
-    
-    .a-item{
-  
+  }
+
+  .a-mobileNav{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 95vw;
+    padding: 40px 0px 28px;
+    background: $white100;
+    text-transform: uppercase;
+
+    ol{
+      display: flex;
     }
   }
-}
-.m-mobileNav{
-  padding: 0px 40px 18px;
-  text-transform: uppercase;
-  width: 100%;;
-  .active{
-    color: $primary500;
-  }
-  .a-item{
-    display: inline;
-    margin-right: 20px;
-  }
-  .a-item:last-child{
-    margin-right: 0;
-  }
-}
 
-.a-h1{
-  text-align: center;
-  @include Heading_H2_W-400;
-  margin-bottom: 24px;
+  .m-mobileNav{
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    padding: 0px 40px 18px;
+    overflow-y: scroll;
+    text-transform: uppercase;
+    
+    a{
+      text-decoration: none;
+    }
+
+    .a-link.active{
+      color: $primary500;
+    }
+
+    .a-item{
+      display: inline;
+      margin-right: 20px;
+    }
+
+    .a-item:last-child{
+      margin-right: 0;
+    }
+
+    .a-link{
+      color: $black100;
+
+      &:hover{
+        color: $primary500;
+      }
+    }
+
+    .a-phoneNumber{
+      color: $black100;
+
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .a-h1{
+    margin-bottom: 24px;
+    text-align: center;
+    @include Heading_H2_W-400;
+  }
+
+  .footer{
+    padding: 88px 59px;
+  }
+
+  .o-footerTop{
+    justify-content: flex-end;
+  }
 }
-.footer{
-  padding: 88px 59px;
-}
-.o-footerTop{
-  justify-content: flex-end;
-}
-}
-@media (max-width:1100px){
+@media (max-width: 1100px){
+
   .a-mobileNav{
+
     .a-item{
       margin-right: 10px;
     }
+
     .a-link{
       @include Uppercase_S14_W-400;
     }
@@ -141,254 +182,366 @@
     text-align: center;
     @include Heading_H3_W-400;
   }
+
   .swiper-button-prev, .swiper-button-next{
+
     &::after{display: none;}
   }
+
   .footer{
-    padding:96px 56px;
+    padding: 96px 56px;
   }
+
   .o-footerTop, .m-row{
     display: flex;
     flex-direction: column;
   }
+
   .o-footerTop{
-     .a-item{
-       margin-right: 73px;
-     }
-     .a-item:last-child{
+
+    .a-item{
+      margin-right: 73px;
+    }
+
+    .a-item:last-child{
       margin-right: 0;
     }
   }
+
   .m-logo{
+
     img{
       width: 289px;
       height: 224px;
     }
   }
+
   .m-contactAdress{
-  align-items: center;
+    align-items: center;
+    margin-bottom: 64px;
   }
-  .m-contactAdress{
-  margin-bottom: 64px;
-  }
+
   .m-nav {
     margin: 92px;
   }
+
   .m-row{
+
     .a-item:nth-child(2){
       margin: 16px 0 43px;
     }
   }
 }
-@media (max-width:800px) {
+@media (max-width: 800px) {
+
+  ol{
+
+    li{
+      list-style: decimal;
+    }
+  }
+
   .o-navBar{
     padding: 8px 22px;
-   
+    
+    .a-navBarSearchMob{
+      display: none;
+    }
   }
-  .a-mobileNav{
-    width: 95vw;
-    height: 100vh;
-    z-index: 3;
+
+  .a-searchInput{
+    @include Heading_H4_W-400;
+  }
+
+  .listBottom{
+
     .a-item{
-      // @include Heading_H3_W-400;
+      margin-bottom: 24px;
+    }
+
+    .a-item:last-child{
+      margin-bottom: 0px;
+    }
+  }
+
+  .m-contactAdress{
+    align-items: center;
+  }
+
+  .listTop, .listBottom{
+    flex-direction: column;
+
+    .a-item{
+      margin-right: 0;
+    }
+  }
+
+  .listTop{
+
+    .a-item{
+      margin-bottom: 40px;
+    }
+
+    .a-item:last-child{
+      margin-bottom: 0px;
+    }
+  }
+
+  .a-mobileNav{
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    height: auto;
+    padding: 28px 54px 49px;
+
+    .a-link{
+      @include Heading_H3_W-400;
       margin-bottom: 47px;
     }
+
+    .a-item{
+      margin-bottom: 47px;
+    }
+
     .a-item:last-child{
       margin-bottom: 0;
     }
-    .a-link{
-      @include Heading_H3_W-400;
-    }
+
     li{
-      // list-style-type: decimal;  
       list-style: decimal;
     }
+
     ol{
       display: flex;
       flex-direction: column;
       list-style-type: decimal-leading-zero;
     }
   }
+
   .menuToggle.hide {
-    margin-right: 0;
     display: none;
-    // margin-bottom: 60px;
+    margin-right: 0;
   }
+
   .m-mobileNav{
     padding: 0;
-  }
-  .a-mobileNav{
-    width: 100vw;
-    min-height: 100vh;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    padding: 28px 54px 49px;
-      .a-link{
-        @include Heading_H5_W-400;
-        margin-bottom: 47px;
-      }
   }
   
   .a-headerButtonPhone{
     display: none;
   }
-  .o-navBar{
-    .a-navBarSearchMob{
-      display: none;
-    }
-  }
- .btnLang{
-  margin-left: 34px;
- }
+
+  // .btnLang{
+  //   margin-left: 34px;
+  // }
+
   .m-col-3 .a-item:last-child {
-     margin-left: 0px;
-}
+    margin-left: 0px;
+  }
+
   header.mobile{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
+
     img{
       width: 84px;
     }
+
     div{
       display: flex;
+      align-items: center;
     }
+
     .a-headerButtonPhone{
       display: block;
-      padding: 0;
       margin-left: 46px;
+      padding: 0;
+
       svg{
-        fill: #000;
         width: 25px;
+        fill: #000000;
       }
-  
     }
+
     .a-link{
       margin: 0;
     }
-    .a-phoneNumber{
-      
-    }
   }
+
   footer.mobile{
     display: block;
-    padding-top: 93px;
     margin: 0;
+    padding-top: 93px;
+
     .a-phoneNumber{
       display: flex;
       justify-content: flex-end;
       @include Heading_H5_W-400;
     }
+
     hr{
-      border-top: 1px solid  #2D2926;
       margin: 38px 0 26px;
-      opacity: 0.5;
+      border-top: 1px solid  #2d2926;
+      opacity: .5;
     }
+
     .socialsIcon{
       padding: 0;
-      border:none;
+      border: none;
       
       path{
-        fill:#2D2926;
-        opacity: 0.5;
+        fill: #2d2926;
+        opacity: .5;
       }
+
       &:hover{
+
         path{
-          transition-duration: 0.3s;
           opacity: 1;
+          transition-duration: .3s;
         }
       }
+
     }
+
     .copyright{
       @include Text_S14_W-400;
-      color: $black100;
-      opacity: 0.5;
       margin-top: 24px;
+      color: $black100;
+      opacity: .5;
+    }
+
+    .mobileFooterBottom{
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
     }
   }
+
   .footer{
     padding: 88px 48px;
   }
+
   .o-footerTop{
     justify-content: center;
   }
+
   .m-nav{
     margin: 80px 0 116px;
   }
-  .listTop, .listBottom{
-    flex-direction: column;
-      .a-item{
-        margin-right: 0;
-      }
-  }
-  .listTop{
+}
+
+@media (max-width: 580px){
+
+
+  
+  .o-navBar{
     .a-item{
-      margin-bottom: 40px;
+      margin: 0;
     }
-    .a-item:last-child{
-      margin-bottom: 0px;
-    }
-  }
-  .listBottom{
-    .a-item{
-      margin-bottom: 24px;
-    }
-    .a-item:last-child{
-      margin-bottom: 0px;
-    }
-  }
-  .m-contactAdress{
-    align-items: center;
   }
 
+  .footer{
+    padding: 88px 10px;
+  }
+
+  .a-h1{
+    text-align: center;
+    @include Heading_H5_W-400;
+  }
+
+  .socialsIcon{
+
+    svg{
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  .a-headerButton {
+    padding: 10px 24px;
+  }
+}
+
+@media (max-width: 450px){
+
+  .a-mobileNav{
+
+    .a-link{
+      @include Heading_H5_W-400;
+    }
+  }
+
+  .a-mobileNav{
+    padding: 25px 24px;
+  } 
+
+  
+  .a-btnLang.mobile{
+    display: block !important;
+    color: $black60;
+  }
+
+  .menuToggle.icon {
+    margin-right: 0;
+  }
+
+  .m-col-3{
+    display: none;
+  }
 
   .m-logo{
+
     img{
-      width: 153px;
-      height: 114px;
+      width: 100%;
+      max-width: 153px;
+      height: auto;
+      max-height: 114px;
     }
   }
-}
-@media (max-width:580px){
-.footer{
-  padding: 88px 10px;
-}
-.a-h1{
-  text-align: center;
-  @include Heading_H5_W-400;
-}
-.socialsIcon{
-svg{
-  width: 23px;
-  height: 23px;
-}
-}
-.a-headerButton {
-  padding: 10px 24px;
-}
-}
-@media (max-width:450px){
+
   header.mobile{
+
     svg{
       width: 15px;
     }
+
     .a-headerButtonPhone{
+
       svg{
         width: 15px;
       }
     }
   }
+  
+  footer.mobile{
+
+    .mobileFooterBottom{
+      flex-direction: column;
+    }
+  }
+
+  .a-searchInput{
+    @include Heading_H6_W-400;
+  }
+
   .a-navBarSearchMob, .a-headerButton, .a-btnLang{
     display: none;
   }
+
   .o-navBar{
+
     .a-btnLang {
       display: none;
     }
   }
- .swiper{
-   height: 495px; //сделать нормальную адаптинвность!!
- }
+
+  .swiper{
+    height: 495px; //сделать нормальную адаптинвность!!
+  }
 }
