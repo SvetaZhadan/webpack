@@ -10,11 +10,6 @@ button{
   background-color: transparent;
   border-width: 0px;
   outline: none;
-
-  &:active, &:focus{
-    border-width: 0px;
-    outline: none;
-  }
 }
 
 header,h1{

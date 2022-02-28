@@ -235,7 +235,7 @@
 @media (max-width: 800px) {
 
   ol{
-
+    
     li{
       list-style: decimal;
     }
@@ -297,8 +297,9 @@
     padding: 28px 54px 49px;
 
     .a-link{
-      @include Heading_H3_W-400;
       margin-bottom: 47px;
+      @include Heading_H3_W-400;
+      font-family: Forum;
     }
 
     .a-item{
@@ -341,7 +342,7 @@
     margin-left: 0px;
   }
 
-  header.mobile{
+  .o-headerMobile{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -360,7 +361,7 @@
       display: block;
       margin-left: 46px;
       padding: 0;
-
+      
       svg{
         width: 25px;
         fill: #000000;
@@ -372,7 +373,7 @@
     }
   }
 
-  footer.mobile{
+  .o-footerMobile{
     display: block;
     margin: 0;
     padding-top: 93px;
@@ -380,6 +381,7 @@
     .a-phoneNumber{
       display: flex;
       justify-content: flex-end;
+      font-family: Forum;
       @include Heading_H5_W-400;
     }
 
@@ -408,14 +410,14 @@
 
     }
 
-    .copyright{
+    .a-copyright{
       @include Text_S14_W-400;
       margin-top: 24px;
       color: $black100;
       opacity: .5;
     }
 
-    .mobileFooterBottom{
+    .m-mobileFooterBottom{
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
@@ -505,7 +507,7 @@
     }
   }
 
-  header.mobile{
+  .o-headerMobile{
 
     svg{
       width: 15px;
@@ -519,15 +521,20 @@
     }
   }
   
-  footer.mobile{
+  .o-footerMobile{
 
-    .mobileFooterBottom{
+    .m-mobileFooterBottom{
       flex-direction: column;
     }
   }
 
   .a-searchInput{
     @include Heading_H6_W-400;
+    font-family: Forum, sans-serif;
+
+    &::placeholder{
+      font-family: Forum, sans-serif;
+    }
   }
 
   .a-navBarSearchMob, .a-headerButton, .a-btnLang{

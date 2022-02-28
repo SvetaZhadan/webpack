@@ -19,6 +19,35 @@ body{
   }
 }
 
+.m-popupBackCall{
+  font-family: Forum;
+
+  .a-h3{
+    @include Heading_H3_W-400;
+  }
+
+  .a-description{
+
+    .top{
+      @include Text_S18_W-400;
+    }
+
+    .bottom{
+      @include Text_S16_W-400;
+    }
+  }
+  .a-input{
+    background-color: $gray10;
+    border: none;
+    outline: 0;
+  }
+  .a-btn{
+    color: $black100;
+    border: 1px solid $black100;
+  }
+
+}
+
 .m-serchPopup{
   position: absolute;
   z-index: 10;
@@ -33,6 +62,11 @@ body{
     border-width: 0px;
     outline: none;
     @include Heading_H3_W-400;
+    border-radius: 0;
+
+    &:focus{
+      border-bottom: 2px solid $black60;
+    }
   }
 }
 
@@ -40,11 +74,11 @@ body{
   cursor: pointer;
 }
 
-header.mobile {
+.o-headerMobile {
   display: none;
 }
 
-.menuToggle{  
+.a-menuToggle{  
   margin-right: 38px;
   color: $black100;
   cursor: pointer;
@@ -176,6 +210,12 @@ header.mobile {
     content: '';
     background: rgba(0,0,0,.5);
   }
+
+  .a-description{
+    @include Text_S18_W-400;
+    max-width: 644px;
+    text-align: center;
+  }
 }
 
 .swiper-slide{
@@ -212,11 +252,7 @@ header.mobile {
   @include Heading_H1_W-400;
 }
 
-.a-description{
-  @include Text_S18_W-400;
-  max-width: 644px;
-  text-align: center;
-}
+
 
 .text{
   position: absolute;
@@ -256,7 +292,7 @@ header.mobile {
 }
 //footer
 
-footer.mobile{
+.o-footerMobile{
   display: none;
 }
 

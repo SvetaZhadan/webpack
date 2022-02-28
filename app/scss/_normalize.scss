@@ -467,10 +467,10 @@ input[type='tel']:focus,
 input[type='color']:focus,
 select:focus,
 textarea:focus {
-  background-color: var(--white);
-  border-color: var(--primary-400);
+  // background-color: var(--white);
+  // border-color: var(--primary-400);
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
+  // box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
 }
 input:not([type]):focus {
   background-color: var(--white);
@@ -603,7 +603,7 @@ input[type='submit']:not(:disabled):active,
 input[type='reset']:not(:disabled):active,
 input[type='button']:not(:disabled):active,
 button:not(:disabled):active {
-  background-color: var(--primary-600);
+  // background-color: var(--primary-600);
   // border-color: var(--primary-600);
   color: var(--white);
 }
@@ -612,7 +612,7 @@ input[type='reset']:focus,
 input[type='button']:focus,
 button:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
+  // box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.5);
 }
 input[type='submit']:disabled,
 input[type='reset']:disabled,
