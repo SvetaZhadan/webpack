@@ -1,58 +1,72 @@
 /* ================================ Base ================================ */
 
-.btn{
+.btn {
   color: $black100;
   background-color: transparent;
   border: 1px solid $black100;
   border-radius: 0;
   outline: none;
-  transition-duration: 0,3s;
+  transition-duration: 0, 3s;
 
   @include Uppercase_S14_W-400;
 
-  &:hover{
+  &:hover {
     color: $white100;
     background-color: $black100;
-    
+
     border-color: $black100;
 
-    path{
+    path {
       fill: $white100;
     }
   }
 
-  &:focus, &:active{
+  &:focus,
+  &:active {
     color: $white100;
     background-color: rgba(31, 31, 31, .6);
-    
+
     border-color: $black100;
   }
 
-  &:disabled{
+  &:disabled {
     color: $black100;
     background-color: transparent;
     border-color: $black100;
   }
 }
 
-.btnLang{
+.btnLang {
   margin: 0;
   color: $white100;
   background-color: $black100;
   border-radius: 0;
   transition-duration: .3s;
- 
 
-  &:hover{
+
+  &:hover {
     color: $white100;
     background-color: rgba(31, 31, 31, .6);
     border-color: rgba(31, 31, 31, .6);
   }
 }
 
-@media (max-width: 1280px){
+.m-popupBackCall {
+  .formInput {
+    background-color: $gray10;
+  }
+}
 
-  .btn{
+@media (max-width: 1280px) {
+
+  .btn {
     padding: 12px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .btn {
+    @include Text_S12_W-400;
   }
 }
