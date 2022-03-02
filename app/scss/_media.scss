@@ -1,21 +1,35 @@
 /* ================================ Media ================================ */
 
+@media (min-width: 450px) {
+
+  .a-btnLang.mobile{
+    display: none;
+    
+  }
+}
+
 @media(min-width: 1280px) {
 
   .a-mobileNav {
     display: none;
   }
-
 }
 
-@media (max-width: 1540px) {
+@media (min-width: 1920px) {  
+
+  .o-navBar{
+    padding: 19px 108px;
+  }
+
+  .a-btnLang.absolute{
+    right: 108px;
+  }
+}
+
+@media (max-width: 1560px) {
 
   .m-popupBackCall {
     padding: 56px 40px;
-  }
-
-  .header {
-    padding-top: 18px;
   }
 
   .a-btnLang.absolute {
@@ -62,6 +76,7 @@
   .o-navBar {
     display: flex;
     justify-content: space-between;
+    padding: 8px 56px;
 
     .a-navBarSearchMob,
     .btnLang {
@@ -92,7 +107,6 @@
     .menuToggle {
       display: block;
       margin: 0;
-      margin-right: 38px;
     }
   }
 
@@ -172,7 +186,7 @@
 
 }
 
-@media (max-width:1355px) {
+@media (max-width: 1355px) {
 
   .o-footerTop {
     justify-content: flex-end;
@@ -181,6 +195,7 @@
   .m-logo {
     margin-right: 54px;
   }
+
   .m-contactAdress{
     margin-right: 50px;
   }
@@ -189,7 +204,8 @@
 @media (max-width: 1100px) {
 
   .a-mobileNav {
-
+    padding: 40px 24px 28px;
+    
     .a-item {
       margin-right: 10px;
     }
@@ -257,12 +273,22 @@
       margin: 16px 0 43px;
     }
   }
+
   .m-contactAdress{
     margin-right: 0px;
   }
 }
 
 @media (max-width: 800px) {
+
+ 
+
+  .o-navBar{
+      
+    .menuToggle {
+      margin-right: 34px;
+    }
+  }
 
   .m-popupBackCall {
     width: 100vw;
@@ -289,6 +315,7 @@
   }
 
   .listTop {
+
     .a-link {
       @include Uppercase_S24_W-400;
     }
@@ -343,10 +370,6 @@
     height: auto;
     padding: 28px 20px;
 
-    .menuToggle {
-      margin-right: 0;
-    }
-
     .a-link {
       margin-bottom: 47px;
       @include Heading_H3_W-400;
@@ -384,10 +407,6 @@
   .a-headerButtonPhone {
     display: none;
   }
-
-  // .btnLang{
-  //   margin-left: 34px;
-  // }
 
   .m-col-3 .a-item:last-child {
     margin-left: 0px;
@@ -496,6 +515,7 @@
   }
 
   .o-navBar {
+
     .a-item {
       margin: 0;
     }
@@ -524,6 +544,15 @@
 }
 
 @media (max-width: 450px) {
+
+  .a-btnLang.adaptive{
+    display: none;
+  }
+
+  .a-btnLang.mobile{
+    display: block;
+    color: $black60;
+  }
 
   .m-popupBackCall {
     padding: 32px 22px;
@@ -595,11 +624,6 @@
   }
 
 
-  .a-btnLang.mobile {
-    display: block !important;
-    color: $black60;
-  }
-
   .menuToggle.icon {
     margin-right: 0;
   }
@@ -649,16 +673,8 @@
   }
 
   .a-navBarSearchMob,
-  .a-headerButton,
-  .a-btnLang {
+  .a-headerButton {
     display: none;
-  }
-
-  .o-navBar {
-
-    .a-btnLang {
-      display: none;
-    }
   }
 
   .swiper {

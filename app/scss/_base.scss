@@ -37,12 +37,10 @@
 }
 
 .btnLang {
-  margin: 0;
   color: $white100;
   background-color: $black100;
   border-radius: 0;
   transition-duration: .3s;
-
 
   &:hover {
     color: $white100;
@@ -52,6 +50,7 @@
 }
 
 .m-popupBackCall {
+  
   .formInput {
     background-color: $gray10;
   }

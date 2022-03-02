@@ -31,8 +31,7 @@ $(document).ready(function () {
     $('.m-mobileNav').slideToggle(0, function () {
       $('.hamburger.hidden').css("display", "block");
       $('.hamburger.active').css("display", "none");
-      $('.a-btnLang').css("display", "none");
-      $('.a-btnLang.absolute').css("display", "none");
+      // $('.a-btnLang').css("display", "none");
       $('.a-phoneNumber').css("display", "flex");
       $('.copyright').css("display", "block");
       // document.body.style.overflow = "hidden";
@@ -41,7 +40,6 @@ $(document).ready(function () {
         $('.m-col-center').css("display", "block");
         $('.hamburger.hidden').css("display", "none");
         $('.hamburger.active').css("display", "block");
-        $('.a-btnLang.absolute').css("display", "none");
         $('.a-phoneNumber').css("display", "none");
         $('.copyright').css("display", "none");
         // document.body.style.overflow = "";
