@@ -6,10 +6,11 @@
   border: 1px solid $black100;
   border-radius: 0;
   outline: none;
-  transition-duration: 0, 3s;
   transition: background 400ms;
+  transition-duration: 0, 3s;
 
   @include Uppercase_S14_W-400;
+
 
   &:hover {
     color: $white100;
@@ -35,14 +36,17 @@
     background-color: transparent;
     border-color: $black100;
   }
+  span{
+    transition-duration: .3s;
+  }
 }
 
 .btnLang {
   color: $white100;
   background-color: $black100;
   border-radius: 0;
-  transition-duration: .3s;
   transition: background 400ms;
+  transition-duration: .3s;
 
   &:hover {
     color: $white100;
@@ -60,31 +64,33 @@
 
 .ripple-container{
   position: absolute;
-  left: 0;
   top: 0;
-  height: 0;
+  left: 0;
+  z-index: 10;
   width: 0;
-  pointer-events: none;
+  height: 0;
   overflow: hidden;
+  pointer-events: none;
+  
 }
 
 .ripple-effect {
-  margin-top: 0px;
-  margin-left: 0px;
   width: 1px;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.033);
-  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  margin-top: 0px;
+  margin-left: 0px;
+  background-color: rgba(0, 0, 0, .033);
   border-radius: 50%;
+  transition: all .4s cubic-bezier(.4, .0, .2, 1);
   pointer-events: none;
 }
 
 .ripple-effect.--light {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, .15);
 }
 
 .ripple-effect.--dark {
-  background-color: rgba(0, 0, 0, 0.075);
+  background-color: rgba(0, 0, 0, .075);
 
 }
 

@@ -21,51 +21,65 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-
 });
 
 $(document).ready(function () {
-  $(".menuToggle").click(function () {
-
-    $(this).toggleClass("active");
-    $('.m-mobileNav').slideToggle(100, function () {
-      $('.hamburger.hidden').css("display", "block");
-      $('.hamburger.active').css("display", "none");
-      $('.a-phoneNumber').css("display", "flex");
-      $('.copyright').css("display", "block");
-      if ($(this).css('display') === "none") {
+  $('.menuToggle').click(function () {
+    $(this).toggleClass('active');
+    $('.m-mobileNav').slideToggle(0, function () {
+      $('.hamburger.hidden').css('display', 'block');
+      $('.hamburger.active').css('display', 'none');
+      $('.a-phoneNumber').css('display', 'flex');
+      $('.copyright').css('display', 'block');
+      if ($(this).css('display') === 'none') {
         $(this).removeAttr('style');
-        $('.m-col-center').css("display", "block");
-        $('.hamburger.hidden').css("display", "none");
-        $('.hamburger.active').css("display", "block");
-        $('.a-phoneNumber').css("display", "none");
-        $('.copyright').css("display", "none");
+        $('.m-col-center').css('display', 'block');
+        $('.hamburger.hidden').css('display', 'none');
+        $('.hamburger.active').css('display', 'block');
+        $('.a-phoneNumber').css('display', 'none');
+        $('.copyright').css('display', 'none');
       }
     });
   });
 
-  $(".a-closeSerchPopup").click(function () {
-    $('.m-serchPopup').slideToggle(0, function () {
-    });
+  $('.a-closeSerchPopup').click(function () {
+    $('.m-serchPopup').slideToggle(0, function () {});
   });
-  $(".btnSearch").click(function () {
+  $('.btnSearch').click(function () {
     $('.m-serchPopup').slideToggle(0, function () {
-      $('.m-serchPopup').css("display", "flex");
+      $('.m-serchPopup').css('display', 'flex');
     });
   });
 
-  $(".btnCallBack").click(function () {
-    $('.t-popup').slideToggle(150, function () {
-      $('.t-popup').css("display", "flex");
-      $('.m-popupBackCall').css("display", "flex");
-      document.body.style.overflow = "hidden";
-    });
+
+  $('.btnCallBack').click(function () {
+    // $('.m-popupBackCall').slideToggle(150, function () {
+    //   $('.t-popup').css('display', 'flex');
+    //   $('.m-popupBackCall').css('display', 'flex');
+    //   document.body.style.overflow = 'hidden';
+    // });
+    $('.t-popup').css('display', 'flex');
+    $('.m-popupBackCall').animate({
+        width: [ "toggle", "swing" ],
+        opacity: "toggle"
+    }, 100, "linear")
+
   });
-  $(".CloseCallBack").click(function () {
-    $('.t-popup').slideToggle(150, function () {
-      $('.t-popup').css("display", "none");
-      document.body.style.overflow = "";
-    });
+
+
+  $('.t-popup').click(function () {
+    $('.m-popupBackCall').animate({ width: 'toggle' }, 500);
+    $('.t-popup').css('display', 'none');
+    document.body.style.overflow = '';
+  });
+
+  $('.CloseCallBack').click(function () {
+    $('.m-popupBackCall').animate({ width: 'toggle' }, 500);
+    $('.t-popup').css('display', 'none');
+    document.body.style.overflow = '';
   });
 });
 
+var phoneMask = IMask(document.getElementById('phone-mask'), {
+  mask: '+{7}(000)000-00-00',
+});
