@@ -9,5 +9,6 @@ import 'validate.js';
 import 'tabbyjs';
 import ApexCharts from 'apexcharts';
 import scrolly from 'scrolly';
+
 import './js/ripple.js';
 import './js/index.js';

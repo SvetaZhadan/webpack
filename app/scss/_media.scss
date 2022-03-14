@@ -21,6 +21,7 @@
     padding: 19px 108px;
   }
 
+
   .a-btnLang.absolute{
     right: 108px;
   }
@@ -28,6 +29,10 @@
 
 @media (max-width: 1560px) {
 
+  .m-searchPopup{
+    padding: 20px 40px;
+  }
+  
   .m-popupBackCall {
     padding: 56px 40px;
   }
@@ -345,6 +350,7 @@
 
   .listBottom {
     flex-direction: column;
+
     .a-link {
       @include Text_S18_W-400;
     }
@@ -375,7 +381,7 @@
     .a-link {
       margin-bottom: 47px;
       @include Heading_H3_W-400;
-      font-family: Forum;
+      font-family: Forum, serif;
     }
 
     .a-item {
@@ -453,7 +459,7 @@
     .a-phoneNumber {
       display: flex;
       justify-content: flex-end;
-      font-family: Forum;
+      font-family: Forum, serif;
       @include Heading_H5_W-400;
     }
 

@@ -3,6 +3,7 @@ Swiper.use([Navigation, Pagination, Scrollbar]);
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+var validate = require("validate.js");
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination],
@@ -21,6 +22,40 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+});
+
+$(function ($) {
+  $(document).mouseup(function (e) {
+    // событие клика по веб-документу
+    var div = $('.m-popupBackCall');
+    if (
+      !div.is(e.target) && // если клик был не по нашему блоку
+      div.has(e.target).length === 0
+    ) {
+      $('.t-popup').removeClass('--blackout');
+      $('.m-popupBackCall').removeClass('--open');
+      $('.t-popup').hide(1000);
+      document.body.style.overflow = '';
+    }
+  });
+});
+
+$('.btnCallBack').click(function () {
+  $('.t-popup').css('display', 'block');
+  setTimeout(function () {
+    $('.t-popup').addClass('--blackout');
+    $('.m-popupBackCall').addClass('--open');
+  }, 20);
+  document.body.style.overflow = 'hidden';
+});
+
+$('.CloseCallBack').click(function () {
+  $('.t-popup').removeClass('--blackout');
+  $('.m-popupBackCall').removeClass('--open');
+  setTimeout(function () {
+    $('.t-popup').css('display', 'none');
+  }, 1000);
+  document.body.style.overflow = '';
 });
 
 $(document).ready(function () {
@@ -43,43 +78,68 @@ $(document).ready(function () {
   });
 
   $('.a-closeSerchPopup').click(function () {
-    $('.m-serchPopup').slideToggle(0, function () {});
-  });
-  $('.btnSearch').click(function () {
-    $('.m-serchPopup').slideToggle(0, function () {
-      $('.m-serchPopup').css('display', 'flex');
+    $('.m-searchPopup').slideToggle(0, function () {
+      $('.t-searchPopup').css('display', 'none');
     });
   });
 
-
-  $('.btnCallBack').click(function () {
-    // $('.m-popupBackCall').slideToggle(150, function () {
-    //   $('.t-popup').css('display', 'flex');
-    //   $('.m-popupBackCall').css('display', 'flex');
-    //   document.body.style.overflow = 'hidden';
-    // });
-    $('.t-popup').css('display', 'flex');
-    $('.m-popupBackCall').animate({
-        width: [ "toggle", "swing" ],
-        opacity: "toggle"
-    }, 100, "linear")
-
-  });
-
-
-  $('.t-popup').click(function () {
-    $('.m-popupBackCall').animate({ width: 'toggle' }, 500);
-    $('.t-popup').css('display', 'none');
-    document.body.style.overflow = '';
-  });
-
-  $('.CloseCallBack').click(function () {
-    $('.m-popupBackCall').animate({ width: 'toggle' }, 500);
-    $('.t-popup').css('display', 'none');
-    document.body.style.overflow = '';
+  $('.btnSearch').click(function () {
+    $('.m-searchPopup').slideToggle(0, function () {
+      $('.m-searchPopup').css('display', 'flex');
+      $('.t-searchPopup').css('display', 'block');
+    });
   });
 });
 
 var phoneMask = IMask(document.getElementById('phone-mask'), {
   mask: '+{7}(000)000-00-00',
 });
+require(["validate.js"], function(validate) {
+var constraints = {
+  
+  phone: {
+    presence: true,
+    format: {
+      pattern: /^(\+){7}((\d{2,3}) ?\d|\d)(([ -]?\d)|( ?(\d{2,3}) ?)){5,12}\d$/,
+      message: function(value, attribute, validatorOptions, attributes, globalOptions) {
+        return validate.format("^%{num} is not a valid phone number", {
+          num: value
+        });
+      }
+    }
+    // exclusion: {
+    //   within: ["nicklas"],
+    //   message: "'%{value}' is not allowed"
+    // }
+  }
+
+};
+
+$('.PhoneNumber').change(function () {
+    console.log("this is",  validate({phone: document.getElementById('phone-mask').value}, constraints));
+});
+});
+
+require(["validate.js"], function(validate1) {
+  var constraints = {
+    
+    name: {
+      presence: true,
+      format: {
+        pattern: /^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$/,
+        message: function(value1, attribute, validatorOptions, attributes, globalOptions) {
+          value1=$('#name');
+          return validate.format("^%{num} is not a valid name", { 
+            
+            num: value1
+          });
+        }
+      },
+    },
+  };
+  
+  $('.Name').change(function () {
+      console.log("this is name",  validate1({phone: document.getElementById('name').value}, constraints));
+  });
+  });
+

@@ -359,7 +359,6 @@ a {
 a:hover,
 a:focus {
   color: var(--primary-600);
-  text-decoration: underline;
 }
 dl {
   margin-bottom: var(--md-pad);
@@ -568,11 +567,12 @@ input[type='submit'],
 input[type='reset'],
 input[type='button'],
 button {
-  background-color: var(--primary);
-  border: var(--primary);
-  border-radius: var(--br);
-  color: var(--white);
-  padding: var(--sm-pad) var(--md-pad);
+  // background-color: var(--primary);
+  // border: var(--primary);
+  // border-radius: var(--br);
+  // color: var(--white);
+  // padding: var(--sm-pad) var(--md-pad);
+  cursor: pointer;
   display: inline-block;
   font-weight: 400;
   text-align: center;
@@ -595,9 +595,9 @@ input[type='submit']:hover,
 input[type='reset']:hover,
 input[type='button']:hover,
 button:hover {
-  background-color: var(--primary-600);
-  border-color: var(--primary-600);
-  color: var(--white);
+  // background-color: var(--primary-600);
+  // border-color: var(--primary-600);
+  // color: var(--white);
 }
 input[type='submit']:not(:disabled):active,
 input[type='reset']:not(:disabled):active,
@@ -620,8 +620,8 @@ input[type='button']:disabled,
 button:disabled {
   opacity: 0.65;
   cursor: not-allowed;
-  background-color: var(--primary);
-  border-color: var(--primary);
+  // background-color: var(--primary);
+  // border-color: var(--primary);
   color: var(--white);
 }
 table {
