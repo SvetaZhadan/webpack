@@ -7,7 +7,6 @@ var validate = require("validate.js");
 
 const swiper = new Swiper('.swiper', {
   modules: [Navigation, Pagination],
-
   direction: 'horizontal',
   loop: true,
   pagination: {
@@ -107,10 +106,6 @@ var constraints = {
         });
       }
     }
-    // exclusion: {
-    //   within: ["nicklas"],
-    //   message: "'%{value}' is not allowed"
-    // }
   }
 
 };
@@ -129,9 +124,8 @@ require(["validate.js"], function(validate1) {
         pattern: /^[а-яА-ЯёЁa-zA-Z]+ [а-яА-ЯёЁa-zA-Z]+ ?[а-яА-ЯёЁa-zA-Z]+$/,
         message: function(value1, attribute, validatorOptions, attributes, globalOptions) {
           value1=$('#name');
-          return validate.format("^%{num} is not a valid name", { 
-            
-            num: value1
+          return validate.format("^%{name} is not a valid name", { 
+            name: value1
           });
         }
       },
@@ -139,7 +133,11 @@ require(["validate.js"], function(validate1) {
   };
   
   $('.Name').change(function () {
-      console.log("this is name",  validate1({phone: document.getElementById('name').value}, constraints));
+      let username=document.getElementById('name').value;
+      console.log("this is name",  validate1({name: username}, constraints));
   });
   });
 
+  if(document.getElementById('name').value==""){
+    $('#name').css({outline:green})
+  }
