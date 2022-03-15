@@ -16,6 +16,13 @@ body {
   }
 }
 
+.messageError{
+  display: none;
+  color: $errorColor;
+  font-family: 'Source Sans Pro', serif;
+  transition: all .3s linear;
+}
+
 .a-btnLang.absolute {
   position: absolute;
   top: 0;
@@ -135,6 +142,14 @@ body {
 
   .form-item {
     position: relative;
+
+    &.--top{
+      margin-bottom: 16px;
+    }
+
+    &.--bottom{
+      margin-bottom: 50px;
+    }
   }
 
   .a-h3 {
@@ -157,20 +172,12 @@ body {
     }
   }
 
-  .a-input.Name {
-    margin-bottom: 16px;
-  }
-
-  .a-input.PhoneNumber {
-    margin-bottom: 50px;
-  }
-
   .a-input.Name,
   .a-input.PhoneNumber {
     transition-duration: .3s;
 
     &:focus {
-      padding: 12px 16px;
+      padding: 11px 16px;
     }
   }
 

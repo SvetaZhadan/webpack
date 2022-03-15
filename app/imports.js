@@ -11,4 +11,6 @@ import ApexCharts from 'apexcharts';
 import scrolly from 'scrolly';
 
 import './js/ripple.js';
+import './js/swiper.js';
+import './js/validator-settings.js';
 import './js/index.js';

@@ -2,12 +2,14 @@
   form.form-request.m-popupBackCall
     .a-h3 Обратный звонок
     .a-description.top Оставьте свой номер телефона и наш менеджер свяжется с вами в близжайшее время
-    .form-item
+    .form-item.--top
       input.a-input.Name.formInput(type="text", name="NameCallBack" id="name" required)
       label.form-label Имя
-    .form-item
+      span.messageError.--name Вы забыли дозаполнить это поле
+    .form-item.--bottom
       input.a-input.PhoneNumber.formInput(type="text", name="PhoneCallBac" id="phone-mask" required)
       label.form-label Номер телефона
+      span.messageError.--phone Вы забыли дозаполнить это поле
     .a-description.bottom Нажимая на кнопку, вы даете согласие на обработку ваших персональных данных
     input.a-btn.CallBack.btn.--ripple.--light(type="submit" value="Заказать звонок")
     input.a-btn.CloseCallBack.btn.--ripple.--light(type="submit" value="Закрыть")
