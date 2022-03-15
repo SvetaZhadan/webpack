@@ -137,7 +137,3 @@ require(["validate.js"], function(validate1) {
       console.log("this is name",  validate1({name: username}, constraints));
   });
   });
-
-  if(document.getElementById('name').value==""){
-    $('#name').css({outline:green})
-  }
