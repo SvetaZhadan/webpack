@@ -27,6 +27,10 @@
 
 @media (max-width: 1560px) {
 
+  .swiper {
+    height: 864px; 
+  }
+
   .m-col-3 {
 
     .a-headerButtonPhone {
@@ -46,9 +50,6 @@
     display: none;
   }
 
-  .a-headerButtonPhone {
-    padding: 10.5px;
-  }
 
   .a-headerButton {
     padding: 10px 32px;
@@ -91,6 +92,10 @@
     .btnLang {
       display: block;
       transition-duration: .3s;
+    }
+    
+    .btnLang.absolute{
+      display: none;
     }
 
     .btnLang {
@@ -212,6 +217,10 @@
 
 @media (max-width: 1355px) {
 
+  .swiper {
+    height: 609px; 
+  }
+
   .o-footerTop {
     justify-content: flex-end;
   }
@@ -236,6 +245,8 @@
 
     .a-link {
       @include Uppercase_S14_W-400;
+      transition-duration: .3s;
+
     }
   }
 
@@ -302,6 +313,9 @@
 
 @media (max-width: 800px) {
 
+  .swiper{
+    height: 864px;
+  }
 
   .t-searchPopup {
 
@@ -446,7 +460,7 @@
       width: 84px;
     }
 
-    div {
+    .m-header__item {
       display: flex;
       align-items: center;
     }
@@ -532,6 +546,10 @@
 }
 
 @media (max-width: 580px) {
+
+  .swiper{
+    height: 608px;
+  }
 
   .a-mobileNav{
     padding: 25px 24px;

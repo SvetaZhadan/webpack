@@ -1,3 +1,4 @@
+
 $(function ($) {
   $(document).mouseup(function (e) {
     // событие клика по веб-документу
@@ -36,32 +37,31 @@ $(document).ready(function () {
   $('.menuToggle').click(function () {
     $(this).toggleClass('active');
     $('.m-mobileNav').slideToggle(0, function () {
-      $('.hamburger.hidden').css('display', 'block');
-      $('.hamburger.active').css('display', 'none');
+      $('.hamburger.hidden').show();
+      $('.hamburger.active').hide();
       $('.a-phoneNumber').css('display', 'flex');
-      $('.copyright').css('display', 'block');
+      $('.copyright').show();
       if ($(this).css('display') === 'none') {
         $(this).removeAttr('style');
-        $('.m-col-center').css('display', 'block');
-        $('.hamburger.hidden').css('display', 'none');
-        $('.hamburger.active').css('display', 'block');
-        $('.a-phoneNumber').css('display', 'none');
-        $('.copyright').css('display', 'none');
+        $('.m-col-center').show();
+        $('.hamburger.hidden').hide();
+        $('.hamburger.active').show();
+        $('.a-phoneNumber').hide();
+        $('.copyright').hide();
       }
     });
   });
 
   $('.a-closeSerchPopup').click(function () {
     $('.m-searchPopup').slideToggle(0, function () {
-      $('.t-searchPopup').css('display', 'none');
+      $('.t-searchPopup').hide();
     });
   });
 
   $('.btnSearch').click(function () {
     $('.m-searchPopup').slideToggle(0, function () {
       $('.m-searchPopup').css('display', 'flex');
-      $('.t-searchPopup').css('display', 'block');
+      $('.t-searchPopup').show();
     });
   });
 });
-
