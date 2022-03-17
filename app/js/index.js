@@ -1,20 +1,3 @@
-
-$(function ($) {
-  $(document).mouseup(function (e) {
-    // событие клика по веб-документу
-    var div = $('.m-popupBackCall');
-    if (
-      !div.is(e.target) && // если клик был не по нашему блоку
-      div.has(e.target).length === 0
-    ) {
-      $('.t-popup').removeClass('--blackout');
-      $('.m-popupBackCall').removeClass('--open');
-      $('.t-popup').hide(1000);
-      document.body.style.overflow = '';
-    }
-  });
-});
-
 $('.btnCallBack').click(function () {
   $('.t-popup').css('display', 'block');
   setTimeout(function () {
@@ -31,6 +14,22 @@ $('.CloseCallBack').click(function () {
     $('.t-popup').css('display', 'none');
   }, 1000);
   document.body.style.overflow = '';
+});
+
+$(function ($) {
+  $(document).mouseup(function (e) {
+    // событие клика по веб-документу
+    var div = $('.m-popupBackCall');
+    if (
+      !div.is(e.target) && // если клик был не по нашему блоку
+      div.has(e.target).length === 0
+    ) {
+      $('.t-popup').removeClass('--blackout');
+      $('.m-popupBackCall').removeClass('--open');
+      $('.t-popup').hide(1000);
+      document.body.style.overflow = '';
+    }
+  });
 });
 
 $(document).ready(function () {
